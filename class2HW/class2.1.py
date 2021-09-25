@@ -16,7 +16,7 @@ Create your Amazon account button
 *Privacy Notice link
 '''
 
-driver = webdriver.Chrome("/Users/seashore/PycharmProjects/Careerist7/python-selenium-automation/chromedriver 2")
+driver = webdriver.Chrome("/chromedriver 2")
 driver.maximize_window()
 driver.implicitly_wait(10)
 
