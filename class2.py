@@ -27,14 +27,50 @@ driver.get('https://www.amazon.com')
 driver.find_element(By.ID, "nav-link-accountList-nav-line-1").click()
 sleep(1)
 # Amazon logo
-driver.find_element(By.ID, "//i[@class='a-icon a-icon-logo']").click()
+driver.find_element(By.XPATH, "//i[@class='a-icon a-icon-logo']").click()
 driver.back()
 # Email field
+email = driver.find_element(By.ID, "ap_email")
+email.clear()
+email.send_keys("yingxukun@gmail.com")
+sleep(2)
 
 # Continue button
+driver.find_element(By.ID, "continue").click()
+sleep(1)
+driver.back()
+sleep(1)
+
+
 # Need help link
+driver.find_element(By.CSS_SELECTOR, ".a-expander-prompt").click()
+sleep(1)
+
+
 # Forgot your password link
+driver.find_element(By.ID, "auth-fpp-link-bottom").click()
+sleep(1)
+driver.back()
+
 # Other issues with Sign-In link
+driver.find_element(By.CSS_SELECTOR, ".a-expander-prompt").click()
+sleep(1)
+driver.find_element(By.ID, "ap-other-signin-issues-link").click()
+sleep(1)
+driver.back()
+
 # Create your Amazon account button
+driver.find_element(By.ID, "createAccountSubmit").click()
+sleep(1)
+driver.back()
+
+
 # *Conditions of use link
+driver.find_element(By.XPATH, "//a[contains(@href,'ref=ap_signin_notification_condition_of_use')]").click()
+driver.back()
+
 # *Privacy Notice link
+driver.find_element(By.XPATH, "//a[contains(@href, 'ref=ap_signin_notification_privacy_notice')]").click()
+
+
+driver.close()
