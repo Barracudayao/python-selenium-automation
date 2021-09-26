@@ -1,6 +1,10 @@
+
+
 from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 
 '''
 2. Practice with locators. 
@@ -16,7 +20,7 @@ Create your Amazon account button
 *Privacy Notice link
 '''
 
-driver = webdriver.Chrome("/chromedriver 2")
+driver = webdriver.Chrome("/Users/seashore/PycharmProjects/Careerist7/python-selenium-automation/chromedriver 2")
 driver.maximize_window()
 driver.implicitly_wait(10)
 
@@ -43,9 +47,11 @@ sleep(1)
 
 
 # Need help link
-driver.find_element(By.CSS_SELECTOR, ".a-expander-prompt").click()
-sleep(1)
+# use explicit wait
 
+wait = WebDriverWait(driver, 10)
+element = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".a-expander-prompt")))
+element.click()
 
 # Forgot your password link
 driver.find_element(By.ID, "auth-fpp-link-bottom").click()
