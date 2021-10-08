@@ -96,3 +96,4 @@ app_binaries/
 *.png
 
 amazon.py
+window_handle_switch_script.py
