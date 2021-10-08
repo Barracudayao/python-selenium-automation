@@ -4,8 +4,12 @@
 
 from selenium import webdriver
 from time import sleep
-
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+
+
 
 driver = webdriver.Chrome(executable_path= "/Users/seashore/PycharmProjects/Careerist7/python-selenium-automation/chromedriver 2")
 driver.maximize_window()
@@ -22,8 +26,8 @@ sleep(1)
 
 # amazon logo locator
 
-driver.find_element(By.CSS_SELECTOR, ".a-icon.a-icon-logo").click()
-sleep(1)
+WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".a-icon.a-icon-logo"))).click()
+
 driver.back()
 sleep(1)
 

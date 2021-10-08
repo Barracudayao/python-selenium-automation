@@ -1,8 +1,9 @@
-
 from selenium import webdriver
 from time import sleep
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 driver = webdriver.Chrome(executable_path="/Users/seashore/PycharmProjects/Careerist7/"
                                           "python-selenium-automation/chromedriver 2")
@@ -30,6 +31,11 @@ sleep(1)
 actual_text = "Cancel Items or Orders"
 expected_text = driver.find_element(By.XPATH, "//div[@class='help-content']/h1").text
 assert expected_text == actual_text, f'Expect "Cancel Items or Orders" , but get {expected_text}'
+
+
+
+
+
 
 
 driver.close()
