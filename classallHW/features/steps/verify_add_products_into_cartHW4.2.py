@@ -36,4 +36,4 @@ def verify_number_items_in_cart(context):
     expected_number.get_attribute()
     assert expected_number == int(1), f' get 1 product number, but got {expected_number}'
 
-    # c
+
