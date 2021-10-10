@@ -37,7 +37,7 @@ def verify_amazon_privacy_notice_page_open(context):
 
 
 @then('User can close new window and switch back to original')
-def close_new_window_switch_back_orignal(context):
+def close_new_window_switch_back_original(context):
     context.driver.close()
     context.driver.switch_to.window(context.driver.original_window)
     current_url1 = context.driver.current_window_handle
