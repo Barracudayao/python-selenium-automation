@@ -32,8 +32,9 @@ def click_add_cart(context):
 
 @Then('Verify number of items in the cart')
 def verify_number_items_in_cart(context):
-    expected_number = context.drvier.find_element(*NUM)
-    expected_number.get_attribute()
-    assert expected_number == int(1), f' get 1 product number, but got {expected_number}'
+    expected_number = context.driver.find_element(*NUM).text
+    # test = expected_number.get_attribute('class') #
+    # print(test)
+    assert int(expected_number) == int(1), f' get 1 product number, but got {expected_number}'
 
 
