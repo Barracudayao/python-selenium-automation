@@ -1,7 +1,9 @@
+
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-class Page:
+
+class BasePage:
 
     def __init__(self, driver):
         self.driver = driver
@@ -42,7 +44,4 @@ class Page:
 
     def verify_url_contains_query(self, query):
         assert query in self.driver.current_url, f'{query} not in {self.driver.current_url}'
-
-
-
 

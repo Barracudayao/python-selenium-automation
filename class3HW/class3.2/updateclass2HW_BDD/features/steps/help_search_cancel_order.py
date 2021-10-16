@@ -6,7 +6,7 @@ SearchHelp = (By.ID, "helpsearch")
 Cancel = (By.CSS_SELECTOR, ".help-content h1")
 
 
-@given('Open Amazon Help page https://www.amazon.com/gp/help/customer/display.html')
+@given('Open Amazon Help pages https://www.amazon.com/gp/help/customer/display.html')
 def open_amazon_help_page(context):
     context.driver.get("https://www.amazon.com/gp/help/customer/display.html")
 

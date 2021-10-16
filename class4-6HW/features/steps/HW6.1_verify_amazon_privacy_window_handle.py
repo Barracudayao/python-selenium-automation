@@ -5,7 +5,7 @@ from time import sleep
 PRIVACY_NOTICE = (By.XPATH, "//a[contains(@href, 'amazon.com/privacy')]")
 
 
-@given('Open Amazon T&C page')
+@given('Open Amazon T&C pages')
 def open_tc_page(context):
     context.driver.get('https://www.amazon.com/gp/help/customer/display.html'
                        '/ref=ap_register_notification_condition_of_use?ie=UTF8&nodeId=508088')
@@ -28,7 +28,7 @@ def switch_newly_opened_window(context):
     context.driver.switch_to.window(new_window)
 
 
-@then('Verify Amazon Privacy Notice page is opened')
+@then('Verify Amazon Privacy Notice pages is opened')
 def verify_amazon_privacy_notice_page_open(context):
     expected_url = context.driver.current_url
     actual_url = "https://www.amazon.com/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ"

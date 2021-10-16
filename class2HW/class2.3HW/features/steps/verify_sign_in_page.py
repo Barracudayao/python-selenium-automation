@@ -14,7 +14,7 @@ def open_amazon_homepage(context):
 def click_orders(context):
     context.driver.find_element(By.CSS_SELECTOR, "#nav-orders .nav-line-2").click()
 
-@then("Verify Sign in page opened")
+@then("Verify Sign in pages opened")
 def verify_sign_in_page_open(context):
     assert 'signin' in context.driver.current_url, f"Expected query not in {context.driver.current_url.lower()}"
     print('Test Passed')

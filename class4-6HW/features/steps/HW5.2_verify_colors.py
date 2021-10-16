@@ -5,7 +5,7 @@ COLORS = (By.XPATH, "//img[@class='imgSwatch']")
 CURRENT_COLOR = (By.XPATH, "//div[@id='variation_color_name']//span[@class='selection']")
 
 
-@given('Open Amazon product {product_id} page')
+@given('Open Amazon product {product_id} pages')
 def open_product_page(context, product_id):
     context.driver.get('https://www.amazon.com/gp/product/B07BJKRR25/')
 

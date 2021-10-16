@@ -15,7 +15,7 @@ driver.implicitly_wait(10)
 
 # Test Case:
 # User can search for solutions of Cancelling an order on Amazon
-# 1. Open Amazon Help page https://www.amazon.com/gp/help/customer/display.html
+# 1. Open Amazon Help pages https://www.amazon.com/gp/help/customer/display.html
 driver.get("https://www.amazon.com/gp/help/customer/display.html")
 sleep(1)
 # 2. Use “Search Help Library” field and search for Cancel order:

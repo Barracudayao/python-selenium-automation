@@ -9,7 +9,7 @@ BESTSELLER = (By.XPATH, "//a[contains(@href, 'nav_cs_bestsellers')]")
 
 @given('Open amazon Bestsellers page')
 def open_bestsellers_page(context):
-    # can't open bestsellers page, instead get homepage redirect to bestseller page
+    # can't open bestsellers pages, instead get homepage redirect to bestseller pages
     context.driver.get("https://www.amazon.com")
     sleep(2)
     context.driver.find_element(*BESTSELLER).click()

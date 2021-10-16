@@ -5,13 +5,13 @@ PRODUCT_FRAME = (By.XPATH, "//li[@class='s-result-item']")
 PRODUCT_NAME = (By.CSS_SELECTOR, ".wfm-sales-item-card__product-name")
 
 
-@given('Open Wholefoods deal page')
+@given('Open Wholefoods deal pages')
 def open_wholefoods_deal_page(context):
     context.driver.get('https://www.amazon.com/wholefoodsdeals')
     sleep(3)
 
 
-@then("Verify Wholefoods deal page has a text ‘Regular’ and a product name")
+@then("Verify Wholefoods deal pages has a text ‘Regular’ and a product name")
 def verify_text_Regular(context):
     product_elements = context.driver.find_elements(*PRODUCT_FRAME)
 

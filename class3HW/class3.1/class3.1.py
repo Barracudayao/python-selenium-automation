@@ -1,5 +1,5 @@
 '''
-1. Find the most optimal locators for Create Account (Registration) page elements:
+1. Find the most optimal locators for Create Account (Registration) pages elements:
 '''
 
 from selenium import webdriver
@@ -15,7 +15,7 @@ driver = webdriver.Chrome(executable_path= "/Users/seashore/PycharmProjects/Care
 driver.maximize_window()
 driver.implicitly_wait(30)
 
-# open amazon creat account page
+# open amazon creat account pages
 driver.get("https://www.amazon.com/ap/register?openid.pape.max_auth_age=0&openid.return_to="
            "https%3A%2F%2Fwww.amazon.com%2F%3F_encoding%3DUTF8%26gclid%3DCjwKCAjw-sqKBhBjEiwAVaQ9a1jPaTxnlbMD1T2ZELcSzxfbMaMQCXXhEwbQ9I1xwCK1tLvhuEC8oBoCsUcQAvD_"
            "BwE%26hvadid%3D381844282515%26hvdev%3Dc%26hvdvcmdl%3D%26hvlocint%3D%26hvlocphy%3D9028321%26hvnetw%3Dg%26hvpone%3D%26hvpos%3D%26hvptwo%3D%26hvqmt%3De%26hvrand%3D3151513621281695843%26hvtargid%3Dkwd-"

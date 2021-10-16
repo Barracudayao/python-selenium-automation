@@ -6,7 +6,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 '''
 2. Practice with locators. 
-Create locators + search strategy for these page elements of Amazon Sign in page:
+Create locators + search strategy for these pages elements of Amazon Sign in pages:
 Amazon logo
 Email field
 Continue button
@@ -30,9 +30,9 @@ driver.maximize_window()
 driver.implicitly_wait(10)
 
 
-# Open Amazon home page
+# Open Amazon home pages
 driver.get('https://www.amazon.com')
-# redirect to sign in page
+# redirect to sign in pages
 WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, "nav-link-accountList-nav-line-1"))).click()
 
 
